@@ -57,11 +57,11 @@ async function translateText() {
   setStatus('Translating...');
 
   try {
-    const res = await fetch('/translate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ q: query, source, target }),
-    });
+    const res = await fetch('https://live-speech-translator-1.onrender.com/translate', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ q: query, source, target }),
+});
 
     const data = await res.json();
 
