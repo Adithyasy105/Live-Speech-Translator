@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Speech Translator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Live Speech Translator</h1>
+      <p>Speak or type text, translate it, and listen to the output.</p>
+    </header>
+
+    <section class="card">
+      <label for="sourceText">Input text or live speech</label>
+      <textarea id="sourceText" rows="5" placeholder="Type or click 'Start Listening'"></textarea>
+
+      <div class="controls">
+        <div class="selects">
+          <div class="field">
+            <label for="sourceLang">Source language</label>
+            <select id="sourceLang">
+              <option value="auto">Auto-detect (will fallback to English)</option>
+              <option value="en">English</option>
+              <option value="hi">Hindi</option>
+              <option value="kn">Kannada</option>
+              <option value="te">Telugu</option>
+              <option value="ta">Tamil</option>
+              <option value="ml">Malayalam</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="targetLang">Target language</label>
+            <select id="targetLang">
+              <option value="kn">Kannada</option>
+              <option value="te">Telugu</option>
+              <option value="ta">Tamil</option>
+              <option value="ml">Malayalam</option>
+              <option value="hi">Hindi</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="listenBtn">🎤 Start Listening</button>
+          <button id="translateBtn">Translate</button>
+          <button id="speakBtn">🔊 Speak</button>
+        </div>
+      </div>
+
+      <label for="translatedText">Translated text</label>
+      <textarea id="translatedText" rows="5" readonly></textarea>
+
+      <div id="status" class="status">Ready</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
